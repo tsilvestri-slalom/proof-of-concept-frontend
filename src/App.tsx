@@ -22,7 +22,7 @@ function App() {
       //   name: data.name
       // });
 
-      const result = await axios.post('https://df105m4wpoq8v.cloudfront.net/api/hello', {
+      const result = await axios.post(process.env.NODE_ENV === "development" ? 'http://localhost:8080/api/hello' : 'https://df105m4wpoq8v.cloudfront.net/api/hello', {
         name: data.name
       });
       
