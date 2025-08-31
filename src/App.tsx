@@ -14,15 +14,8 @@ function App() {
   const onSubmit = async (data: FormData) => {
     setLoading(true);
     try {
-      // const result = await axios.post('http://localhost:8080/api/hello', {
-      //   name: data.name
-      // });
 
-      // const result = await axios.post('http://hello-world-alb-436597616.us-east-1.elb.amazonaws.com/api/hello', {
-      //   name: data.name
-      // });
-
-      const result = await axios.post(process.env.NODE_ENV === "development" ? 'http://localhost:8080/api/hello' : 'https://df105m4wpoq8v.cloudfront.net/api/hello', {
+      const result = await axios.post(process.env.NODE_ENV === "development" ? 'http://localhost:8080/api/hello' : 'https://d1gkewszfhye5h.cloudfront.net/api/hello', {
         name: data.name
       });
       
@@ -70,7 +63,7 @@ function App() {
             disabled={loading}
             className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-4 rounded-lg transition duration-200 ease-in-out transform hover:scale-105 disabled:scale-100"
           >
-            {loading ? 'Sending...' : 'Say Hello!'}
+            {loading ? 'Sending...' : 'Say Hello'}
           </button>
         </form>
 
