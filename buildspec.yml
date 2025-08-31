@@ -11,8 +11,6 @@ phases:
     commands:
       - echo Building React app...
       - npm run build
-      - echo Uploading to S3...
-      - aws s3 sync build/ s3://$S3_BUCKET/ --delete
 
 artifacts:
   files:
