@@ -18,7 +18,11 @@ function App() {
       //   name: data.name
       // });
 
-      const result = await axios.post('http://hello-world-alb-436597616.us-east-1.elb.amazonaws.com/api/hello', {
+      // const result = await axios.post('http://hello-world-alb-436597616.us-east-1.elb.amazonaws.com/api/hello', {
+      //   name: data.name
+      // });
+
+      const result = await axios.post('https://df105m4wpoq8v.cloudfront.net/api/hello', {
         name: data.name
       });
       
