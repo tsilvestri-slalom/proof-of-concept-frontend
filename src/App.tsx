@@ -70,7 +70,7 @@ function App() {
             disabled={loading}
             className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-4 rounded-lg transition duration-200 ease-in-out transform hover:scale-105 disabled:scale-100"
           >
-            {loading ? 'Sending...' : 'Say Hello'}
+            {loading ? 'Sending...' : 'Say Hello!'}
           </button>
         </form>
 
