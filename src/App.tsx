@@ -14,7 +14,11 @@ function App() {
   const onSubmit = async (data: FormData) => {
     setLoading(true);
     try {
-      const result = await axios.post('http://localhost:8080/api/hello', {
+      // const result = await axios.post('http://localhost:8080/api/hello', {
+      //   name: data.name
+      // });
+
+      const result = await axios.post('http://hello-world-alb-436597616.us-east-1.elb.amazonaws.com/api/hello', {
         name: data.name
       });
       
