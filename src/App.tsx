@@ -15,7 +15,9 @@ function App() {
     setLoading(true);
     try {
 
-      const result = await axios.post(process.env.NODE_ENV === "development" ? 'http://localhost:8080/api/hello' : 'https://d3bvyk4auseiiv.cloudfront.net/api/hello', {
+      const baseURL = process.env.REACT_APP_API_BASE_URL || 'https://dhb5cdvxb4om6.cloudfront.net';
+      console.log('base url ', baseURL);
+      const result = await axios.post(`${baseURL}/api/hello`, {
         name: data.name
       });
       
