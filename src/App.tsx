@@ -14,9 +14,7 @@ function App() {
   const onSubmit = async (data: FormData) => {
     setLoading(true);
     try {
-
-      const baseURL = process.env.REACT_APP_API_BASE_URL || 'https://dhb5cdvxb4om6.cloudfront.net';
-      console.log('base url ', baseURL);
+      const baseURL =  process.env.REACT_APP_API_BASE_URL;
       const result = await axios.post(`${baseURL}/api/hello`, {
         name: data.name
       });
