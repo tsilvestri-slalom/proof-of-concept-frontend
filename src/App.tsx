@@ -13,8 +13,9 @@ function App() {
 
   const onSubmit = async (data: FormData) => {
     setLoading(true);
+    console.log("process.env.NODE_ENV", process.env.NODE_ENV);
     try {
-      const baseURL =  process.env.REACT_APP_API_BASE_URL;
+      const baseURL = process.env.NODE_ENV === "production" ? process.env.REACT_APP_API_URL : process.env.REACT_APP_API_LOCAL;
       const result = await axios.post(`${baseURL}/api/hello`, {
         name: data.name
       });
