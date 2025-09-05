@@ -10,7 +10,7 @@ phases:
   pre_build:
     commands:
       - echo Setting environment variables...
-      - export REACT_APP_API_URL=https://d9cppas1tozjn.cloudfront.net
+      - export REACT_APP_API_URL=https://dobat321yqe85.cloudfront.net
       - export REACT_APP_ENV=production
       - echo "API URL is $REACT_APP_API_URL"
       - echo "Environment is $REACT_APP_ENV"
