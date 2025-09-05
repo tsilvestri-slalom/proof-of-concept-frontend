@@ -38,7 +38,7 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-xl shadow-2xl p-8 w-full max-w-md">
         <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-          Hello World
+          Hello World App!
         </h1>
         
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
